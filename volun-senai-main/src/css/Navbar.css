@@ -1,0 +1,68 @@
+@import url(./Global.css);
+
+.navbar-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 12px;
+    background-color: var(--cor-principal); /* Cor de fundo equivalente a bg-blue-900 */
+    color: var(--fonte-cor-branco);
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar-menu-container a{
+    display: inline-flex;
+    gap: 40px;
+    flex-direction: row;
+    padding-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in;
+    color: var(--fonte-cor-branco);
+    cursor: pointer;
+    align-items: center;
+}
+ 
+.navbar-menu-container li:hover {
+    color: var(--cor-secundaria); /* Cor de hover equivalente a hover:text-orange-500 */
+}
+
+.navbar-input-pesquisa input{
+    text-align: center;
+    width: 240px;
+    height: 35px;
+    border-radius: 25px;
+}
+  
+.navbar-container button {
+    display: block;
+    width: 200px;
+    height: 30px;
+    border-radius: 16px;
+    font-size: 16px;
+    background-color: var(--cor-secundaria);
+    border: none;
+    color: var(--fonte-cor-branco);
+    cursor: pointer
+}
+
+.navbar-container button:hover {
+    background-color: var(--fundo-principal);
+    color: var(--cor-principal);
+}
+  
+  /* Media Queries */
+@media (min-width: 768px) {
+    .navbar-container ul {
+      display: flex;
+      gap: 40px;
+    }
+  
+    .navbar-container .button {
+      display: block;
+    }
+  
+    .navbar-container .navbar-menu-button {
+      display: none;
+    }
+}

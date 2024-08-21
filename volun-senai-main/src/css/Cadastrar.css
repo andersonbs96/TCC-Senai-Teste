@@ -1,0 +1,46 @@
+@import url(./Global.css);
+
+.cadastrar-container {
+    text-align: center;
+    background-color: var(--fundo-principal);
+    font-family: var(--font-family);
+}
+
+.cadastrar-formulario {
+    margin: 0px 30px;
+    background-color: var(--fundo-principal);
+}
+.cadastrar-formulario p {
+    font-size: 16px;
+    margin: 0px 100px;
+    padding: 50px 0px;
+    text-align: left;
+}
+.cadastrar-email-container {
+    text-align: left;
+    margin: 0 100px;
+    display: grid;
+}
+.cadastrar-email-container input {
+    width: 400px;
+    height: 30px;
+    border: 1px var(--fundo-input);
+    box-shadow: 0px 5px 5px 0px var(--sombra);
+    border-radius: 12px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.cadastrar-botão-container {
+    padding-bottom: 50px;
+}
+.cadastrar-botão-container button{
+    width: 200px;
+    height: 30px;
+    border-radius: 16px;
+    font-size: 16px;
+    background-color: var(--cor-secundaria);
+    border: none;
+    color: var(--fonte-cor-branco);
+    cursor: pointer;
+    margin: 50px 0px;
+}
