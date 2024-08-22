@@ -4,9 +4,16 @@ import Modal from "react-modal";
 import Logo from "../assets/images/logo.svg";
 import "./../css/Navbar.css";
 import Login from "./Login";
+import { IoCloseSharp } from "react-icons/io5";
+import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
-  const [ModalAberta, setModalAberta] = useState(false);
+  const [AbrirMenu, setAbrirMenu] = useState(false);
+  const [AbrirLogin, setAbrirLogin] = useState(false);
+
+  const toggleMenu = () => {
+    setAbrirMenu(!AbrirMenu);
+  };
   
   return (
     <>
@@ -20,11 +27,23 @@ const Navbar = () => {
           <a href="./../pages/Sobre.jsx">Sobre Nós</a>
           <a href="./../pages/Organizacao.jsx">Sou uma organização</a>
         </div>
-        <button type="button" onClick={() => setModalAberta(true)}>Entrar</button>
+        <button type="button" onClick={() => setAbrirLogin(true)}>Entrar</button>
+        <button className="navbar-menu-button" onClick={toggleMenu}>
+          {AbrirMenu ? <IoCloseSharp /> : <IoMdMenu />}
+        </button>
       </nav>
+      {AbrirMenu && (
+        <div className="navbar-sidebar">
+          <ul>
+            <li><a href="./../pages/Eventos.jsx">Eventos</a></li>
+            <li><a href="./../pages/Sobre.jsx">Sobre Nós</a></li>
+            <li><a href="./../pages/Organizacao.jsx">Sou uma organização</a></li>
+          </ul>
+        </div>
+      )}
       <Modal
-        isOpen = {ModalAberta}
-        onRequestClose={() => setModalAberta(false)}
+        isOpen = {AbrirLogin}
+        onRequestClose={() => setAbrirLogin(false)}
         style={{
           overlay: {
             display: 'flex',
@@ -38,10 +57,11 @@ const Navbar = () => {
             borderRadius: 32,
             textAlign: 'center',
             backgroundColor: '#FBFBFE', 
+            width: 500,
           }
         }}
       >
-        <Login onClose = {() => setModalAberta(false)}></Login>
+        <Login fecharLogin = {() => setAbrirLogin(false)}></Login>
       </Modal>
     </>
   );
