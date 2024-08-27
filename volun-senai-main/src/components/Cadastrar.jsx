@@ -1,9 +1,8 @@
 import React from "react"
-import Logo from "./../assets/images/logo.svg";
+import Logo from "./../assets/logos/logo-big.svg";
 import "./../css/Cadastrar.css";
 
 const Cadastrar = () => {
-
     return (
         <>
             <main className="cadastrar-container">

@@ -1,19 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "react-modal";
-import Logo from "../assets/images/logo.svg";
+import Logo from "../assets/logos/logo-small.svg";
 import "./../css/Navbar.css";
 import Login from "./Login";
-import { IoCloseSharp } from "react-icons/io5";
-import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
-  const [AbrirMenu, setAbrirMenu] = useState(false);
   const [AbrirLogin, setAbrirLogin] = useState(false);
-
-  const toggleMenu = () => {
-    setAbrirMenu(!AbrirMenu);
-  };
   
   return (
     <>
@@ -28,19 +21,7 @@ const Navbar = () => {
           <a href="./../pages/Organizacao.jsx">Sou uma organização</a>
         </div>
         <button type="button" onClick={() => setAbrirLogin(true)}>Entrar</button>
-        <button className="navbar-menu-button" onClick={toggleMenu}>
-          {AbrirMenu ? <IoCloseSharp /> : <IoMdMenu />}
-        </button>
       </nav>
-      {AbrirMenu && (
-        <div className="navbar-sidebar">
-          <ul>
-            <li><a href="./../pages/Eventos.jsx">Eventos</a></li>
-            <li><a href="./../pages/Sobre.jsx">Sobre Nós</a></li>
-            <li><a href="./../pages/Organizacao.jsx">Sou uma organização</a></li>
-          </ul>
-        </div>
-      )}
       <Modal
         isOpen = {AbrirLogin}
         onRequestClose={() => setAbrirLogin(false)}
