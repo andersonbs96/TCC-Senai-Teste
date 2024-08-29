@@ -2,14 +2,7 @@ import React from "react"
 import Logo from "./../assets/logos/logo-big.svg";
 import "./../css/Cadastrar.css";
 
-const Cadastrar = ({FormData, setFormData, handleRegister}) => {
-    const handleChange = (e) => {
-        const {id, value} = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [id]: value,
-        }));
-    };
+const Cadastrar = () => {
 
     return (
         <>
@@ -18,33 +11,18 @@ const Cadastrar = ({FormData, setFormData, handleRegister}) => {
                     <img className="cadastrar-logo" src={Logo} alt="Logo"/>
                     <div className="cadastrar-input-container">
                         <label htmlFor="cadastrar-email">E-mail: </label>
-                        <input 
-                            id="cadastrar-email" 
-                            type="email" 
-                            value={FormData["cadastrar-email"] || ""}
-                            onChange={handleChange}
-                        />
+                        <input id="cadastrar-email" type="email" />
                     </div>
                     <div className="cadastrar-input-container">
                         <label htmlFor="cadastrar-senha">Senha: </label>
-                        <input 
-                            id="cadastrar-senha" 
-                            type="password"
-                            value={FormData["cadastrar-senha"] || ""}
-                            onChange={handleChange}
-                        />
+                        <input id="cadastrar-senha" type="password" />
                     </div>
                     <div className="cadastrar-input-container">
                         <label htmlFor="confirmar-senha">Confirmar a Senha: </label>
-                        <input 
-                            id="confirmar-senha" 
-                            type="password" 
-                            value={FormData["confirmar-senha"] || ""}
-                            onChange={handleChange}
-                        />
+                        <input id="confirmar-senha" type="password" />
                     </div>
                     <div className="cadastrar-botao-container">
-                        <button onClick={handleRegister}>CADASTRAR</button>
+                        <button onClick={() => Registrar()}>CADASTRAR</button>
                     </div>
                 </div>
             </main>

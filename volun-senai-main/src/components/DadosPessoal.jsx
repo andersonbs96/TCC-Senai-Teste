@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const DadosPessoal = ({ FormData, setFormData }) => {
+const DadosPessoal = () => {
     const [DadosPagina, setDadosPagina] = useState(1);
 
     const proxPasso = () => {
