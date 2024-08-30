@@ -6,6 +6,7 @@
     display: block;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     padding: 20px 0px;
     text-align: center;
     font-family: var(--font-family);
@@ -15,18 +16,14 @@
     display: flex;
     gap: 50px;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 .footer-logo {
     width: 150px;
     height: 150px;
-    margin-right: 50px;
+    margin-right: 200px;
     align-items: center;
 }
-.footer-links:first-child {
-    margin-right: 50px;
-}
-.footer-links:nth-child(1) {
+.footer-links {
     margin-right: 100px;
 }
 .footer-social-icons {

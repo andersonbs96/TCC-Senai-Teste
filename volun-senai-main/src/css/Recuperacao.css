@@ -1,0 +1,8 @@
+@import url(./Global.css);
+
+.recuperacao-container {
+    text-align: center;
+    font-family: var(--font-family);
+    width: 100%;
+    background-color: var(--fundo-principal);
+}
