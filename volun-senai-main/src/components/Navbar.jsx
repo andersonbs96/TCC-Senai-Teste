@@ -6,9 +6,35 @@ import Login from "./Login";
 import { IoMdMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
 
+const estiloModal = {
+  overlay: {
+      position: 'fixed',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      top: -50,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      margin: 'auto',
+  },
+  content: {
+      top: 20,
+      right: 40,
+      bottom: 20,
+      left: 40,
+      borderRadius: 32,
+      position: 'relative',
+      textAlign: 'center',
+      backgroundColor: '#FBFBFE',
+      width: 500,
+  }
+};
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [modalAberta, setModalAberta] = useState(false);
+  const [LoginAbrir, setLoginAbrir] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -38,7 +64,7 @@ const Navbar = () => {
           <a href="./../pages/Sobre.jsx">Sobre Nós</a>
           <a href="./../pages/Organizacao.jsx">Sou uma organização</a>
         </div>
-        <button className="navbar-entrar" type="button" onClick={() => setModalAberta(true)}>Entrar / Registre-se</button>
+        <button className="navbar-entrar" type="button" onClick={() => setLoginAbrir(true)}>Entrar / Registre-se</button>
         <button className="menu-button" onClick={toggleMenu}>
           {menuOpen ? <IoCloseSharp /> : <IoMdMenu />}
         </button>
@@ -53,25 +79,11 @@ const Navbar = () => {
         </div>
       )}
       <Modal
-        isOpen={modalAberta}
-        onRequestClose={() => setModalAberta(false)}
-        style={{
-          overlay: {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          },
-          content: {
-            inset: 'auto',
-            position: 'relative',
-            top: 50,
-            borderRadius: 32,
-            textAlign: 'center',
-            backgroundColor: '#FBFBFE',
-          }
-        }}
+        isOpen={LoginAbrir}
+        onRequestClose={() => setLoginAbrir(false)}
+        style={estiloModal}
       >
-        <Login fecharLogin={() => setModalAberta(false)} />
+        <Login fecharLogin={() => setLoginAbrir(false)} />
       </Modal>
     </>
   );

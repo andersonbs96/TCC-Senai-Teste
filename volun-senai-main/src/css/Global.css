@@ -9,12 +9,16 @@
 :root {
     /* Cores das Páginas */
     --cor-principal: #1F0171;
-    --cor-secundaria: #FFA500;
+    --cor-secundaria: #FF5C00;
     --cor-terciaria: #280F58;
     --cor-quarta: #4B7CC6;
     --cor-fundo-gradiente: linear-gradient(to right, var(--cor-terciaria), var(--cor-quarta));
     --fundo-principal: #FBFBFE;
-    --fundo-input: #E5E5E5;
+
+    /* Input */
+    --input-background: #E5E5E5;
+    --input-shadow: 0px 5px 5px 0px #c5c5c5;
+    --input-border: none;
 
     /* Sidebar */
     --sidebar: #1E3A8A;
@@ -34,8 +38,30 @@
     /* Cores do Botão */
     --botao-tela-branca: #1F0171;
     --botao-tela-escura: #FCFCFE;
-    --botão-hover: #FF5C00;
+    --botao-hover: #FF5C00;
+    --botao-shadow: 0px 5px 5px 0px #c5c5c5;
 
     /* Fontes */
     --font-family: "Poppins", sans-serif;
+
+}
+
+/* Estilo para a camada de overlay */
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Cor de fundo com opacidade */
+}
+
+/* Estilo para o conteúdo do modal */
+.content {
+    position: relative;
+    top: 0;
+    inset: auto; /* Esse valor geralmente não é necessário no CSS */
+    border-radius: 32px;
+    text-align: center;
+    background-color: #FBFBFE;
+    width: 500px;
+    height: auto;
 }

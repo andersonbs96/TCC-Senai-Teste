@@ -8,7 +8,7 @@
     width: 100%;
     background-color: var(--fundo-principal);
     color: var(--fonte-cor-preto);
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-family);
 }
 .login-header-container {
     height: auto;
@@ -17,33 +17,34 @@
 .login-botao-fechar {
     width: 20px;
     height: 20px;
-    box-shadow: 0 2px 2px 0 var(--sombra); 
+    box-shadow: var(--botão-shadow); 
 }
 .login-header-container img {
     width: 33%;
     height: 33%;
 }
 .login-main-container {
-    margin: 0px 100px;
+    margin: 0px 50px;
     border-radius: 12px;
 }
 .login-main-form {
-    margin: 50px 0px;
+    margin: 10px 0px;
     justify-content: baseline;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .login-main-form input {
-    background-color: var(--fundo-input);
-    border: none ;
+    background-color: var(--input-background);
+    box-shadow: var(--input-shadow);
+    border: var(--input-border);
     border-radius: 12px;
     padding-left: 20px;
     width: 300px;
     height: 32px;
     margin-bottom: 20px;
     font-size: 16px;
-    box-shadow: 0px 5px 5px 0px var(--sombra);
+    
 }
 .login-main-form button {
     background-color: var(--cor-principal);
@@ -54,6 +55,7 @@
     height: 40px;
     font-size: 16px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 .login-main-form p {
     font-size: 12px;
@@ -69,31 +71,32 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: var(--fundo-botao);
     border-radius: 10px;
-    box-shadow: 0px 5px 5px 0px var(--sombra);
+    box-shadow: var(--botão-shadow);
 }
  
 .login-other a{
+    background-color: var(--botao-tela-branco);
     justify-content: center;
     display: flex;
     align-items: center;
     text-decoration: none;
     color: var(--fonte-cor-preto);
+    box-shadow: 0px 5px 5px 0px var(--botão-shadow);
     font-size: 32px;
 }
 .icon-log{
     display: flex;
-    padding: 10px;
+    padding-right: 10px;
     width: 30px;
     height: 30px;
     justify-content: center;
     align-items: center;
 }
 .login-paragraph {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 12px;
 }
-.login-paragraph a {
+.login-paragraph button {
     cursor: pointer;
 }
